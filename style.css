@@ -1,0 +1,61 @@
+* {
+    margin:0px;
+    padding: 0px;
+}
+
+
+#black {
+    background-color: black;
+    border: grey 10px solid;
+    height: 800px;
+    width: 1000px;
+}
+
+/* #black img {
+    
+} */
+
+
+#selectArena {
+    margin: 200px auto 0px auto;
+    background-color: #a3a4a6;
+    width: 290px;
+    height: 168px;
+    border: rgb(68, 68, 68) 5px solid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+#selectArena h1 {
+    margin: 20px auto;
+    color: orange;
+    text-shadow: 2px 2px white;
+}
+
+button {
+    margin: 5px;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    border: none; 
+}
+#characters {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+#player1 {
+    position:absolute;
+    left: 100px;
+    width: 200px;
+}
+
+#player2 {
+    position:absolute;
+    right: 100px;
+    width: 200px;
+
+}

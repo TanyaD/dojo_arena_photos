@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        
+        $(document).ready(function() {
+            $("button").hover(function() {
+                $('#black').css("background-image",'url('+ $(this).attr("data-pic")+')');
+                $('#black').css("background-size", '100% 100%');
+                $('#black').css("background-repeat", 'no-repeat');
+            }, function() {
+                $('#black').css("background",'black');
+            });
+
+            $('button').click(function() {
+                $("h1").text("Select Players");
+                $('button').remove();
+
+                $("h1").after("<select id=players1>");
+                $("h1").after("<select id=players2>");
+
+                $("select").append($('<option>', {
+                    value: 1,
+                    text: 'Select Ninja'
+                }))
+                $("select").append($('<option>', {
+                    value: 'donny.png',
+                    text: 'Donny'
+                }))
+                $("select").append($('<option>', {
+                    value: 'leo.png',
+                    text: 'Leo'
+                }))
+                $("select").append($('<option>', {
+                    value: 'mikey.png',
+                    text: 'Mikey'
+                }))
+
+                $("select").append($('<option>', {
+                    value: 'raphael.png',
+                    text: 'Raphael'
+                }))
+            })
+
+            $("#selectArena").on("change", "#players1", function() {
+                $("img[id=player2]").attr("src", $(this).val());
+            })
+            $("#selectArena").on("change", "#players2", function () {
+                $("img[id=player1]").attr("src", $(this).val());
+            })
+        })
+    </script>
+    
+</head>
+<body>
+    <div id="black">
+        <div id="selectArena">
+            <h1>Select Arena</h1>
+            <button type="button" data-pic="beach.jpg">beach</button>
+            <button type="button" data-pic="earth.jpg">planet</button>
+            <button type="button" data-pic="dojo.jpg">dojo</button>
+            <button type="button" data-pic="forest.jpg">forest</button>
+            <button type="button" data-pic="matrix.jpg">matrix</button>
+            <button type="button" data-pic="snow.jpg">snow</button>            
+        </div>
+        <div id="characters">
+            <img src="a" id="player1">
+            <img src="a" id="player2">
+        </div>
+        
+    </div>
+</body>
+</html>
